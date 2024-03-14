@@ -3,7 +3,7 @@
       {
         "role": "roles/resourcemanager.organizationAdmin",
         "members": [
-          "user:mike@example.com",
+          "user:service@ssibdev.com.ng",
           "group:admins@example.com",
           "ssibdev.com.ng",
           "137024560456-compute@developer.gserviceaccount.com"
@@ -12,7 +12,7 @@
       {
         "role": "roles/resourcemanager.organizationViewer",
         "members": [
-          "user:eve@example.com"
+          "testsybil.dev@gmail.com"
         ],
         "condition": {
           "title": "expirable access",

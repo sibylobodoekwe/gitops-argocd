@@ -1,3 +1,8 @@
+provider "google" {
+  project = "{{YOUR GCP PROJECT}}"
+  region  = "us-central1"
+  zone    = "us-central1-c"
+}
 resource "kubernetes_namespace" "argocd" {
   metadata {
     name = "argocd-${var.env}"
