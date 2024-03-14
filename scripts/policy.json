@@ -1,0 +1,14 @@
+{
+    "version": integer,
+    "bindings": [
+      {
+        object (Binding)
+      }
+    ],
+    "auditConfigs": [
+      {
+        object (AuditConfig)
+      }
+    ],
+    "etag": string
+  }
