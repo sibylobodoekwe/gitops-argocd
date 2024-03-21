@@ -16,7 +16,7 @@ Create a service account and download its JSON key. This service account will be
 
 - Configure Terraform
 git clone https://github.com/sibylobodoekwe/kubernetes-iaac-microservice
-cd gcp-k8s-argocd
+cd terraform
 
 
 Create a terraform.tfvars file and provide the required variables:
