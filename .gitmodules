@@ -1,0 +1,6 @@
+[submodule "microservice-sockshop/sock-shop-deploy"]
+	path = microservice-sockshop/sock-shop-deploy
+	url = https://github.com/sibylobodoekwe/kubernetes-iaac-microservice
+[submodule "microservice-sockshop/prometheus-setup"]
+	path = microservice-sockshop/prometheus-setup
+	url = https://github.com/sibylobodoekwe/kubernetes-iaac-microservice
