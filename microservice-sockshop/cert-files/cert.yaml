@@ -1,0 +1,46 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: acme-crt
+spec:
+  secretName: acme-crt
+  dnsNames:
+  - microservice.ssibdev.com.ng
+  issuerRef:
+    name: letsencrypt-staging
+    kind: ClusterIssuer
+    group: cert-manager.io
+
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: nginx-tls
+  namespace: cert-manager
+spec:
+  secretName: nginx-tls
+  issuerRef:
+    name: letsencrypt-staging
+    kind: ClusterIssuer
+  dnsNames:
+    - microservice.ssibdev.com.ng
+  acme:
+    config:
+      - dns01:
+          provider: google-cloud-dns
+        domains:
+          - microservice.ssibdev.com.ng
+
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: acme-crt
+spec:
+  secretName: acme-crt-secret
+  dnsNames:
+  - microservice.ssibdev.com.ng
+  issuerRef:
+    name: letsencrypt-staging
+    kind: ClusterIssuer
+    group: cert-manager.io

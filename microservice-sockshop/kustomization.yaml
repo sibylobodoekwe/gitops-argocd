@@ -1,0 +1,40 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - prometheus-setup/prometheus-service.yaml
+  - prometheus-setup/prometheus-ingress.yaml
+  - prometheus-setup/prometheus-deployment.yaml
+  - prometheus-setup/clusterRole.yaml
+  - config-map.yaml
+  - cert-files/cert-man.crd.yaml
+  - cert-files/cert.yaml
+  - cert-files/issuer.yaml
+  - cert-files/prodcert.yaml
+  - cert-files/prodissuer.yaml
+  - manifest-metrics-configs/cluster-role-binding.yaml
+  - manifest-metrics-configs/deployment.yaml
+  - manifest-metrics-configs/service.yaml
+  - manifest-metrics-configs/cluster-role.yaml
+  - manifest-metrics-configs/service-account.yaml
+  - manifest-alerting/AlertManagerConfigmap.yaml
+  - manifest-alerting/Deployment.yaml
+  - manifest-alerting/Service.yaml
+  - manifest-alerting/AlertTemplateConfigMap.yaml
+  - logging/es-dep.yaml
+  - logging/es-dep.yaml
+  - logging/es-pv.yaml
+  - logging/es-svc.yaml
+  - logging/fluentd.yaml
+  - logging/kibana.yaml
+  - logging/logging-ns.yaml
+  
+
+
+patches:
+
+  - patch-prometheus-deployment.yaml
+commonLabels:
+  app: prometheus
+commonAnnotations:
+  prometheus.io/scrape: "true"
