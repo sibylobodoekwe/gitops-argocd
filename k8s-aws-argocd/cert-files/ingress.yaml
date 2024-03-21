@@ -1,0 +1,8 @@
+scripts
+ ┣ ingress.yaml
+ Edit the ingress.yaml block to your Domain name http://ssibdev.com.ng
+  - hosts:
+    - microservice.http://ssibdev.com.ng
+    secretName: acme-crt-prod
+  rules:
+  - host: microservice.http://ssibdev.com.ng
