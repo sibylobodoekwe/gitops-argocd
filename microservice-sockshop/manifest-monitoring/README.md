@@ -16,9 +16,9 @@ As part of our commitment to helping the DevOps community save money on Promethe
 
 ## Other Manifest repos
 
-Kube State metrics manifests: https://github.com/devopscube/manifest-metrics-configs
+Kube State metrics manifests: https://github.com/devopscube/manifest-metricss
 
-Alert manager Manifests: https://github.com/bibinwilson/manifest-alerting
+Alert manager Manifests: https://github.com/bibinwilson/manifest-alerts
 
 Grafana manifests: https://github.com/bibinwilson/kubernetes-grafana
 

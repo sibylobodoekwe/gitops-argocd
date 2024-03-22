@@ -12,15 +12,15 @@ resources:
   - cert-files/issuer.yaml
   - cert-files/prodcert.yaml
   - cert-files/prodissuer.yaml
-  - manifest-metrics-configs/cluster-role-binding.yaml
-  - manifest-metrics-configs/deployment.yaml
-  - manifest-metrics-configs/service.yaml
-  - manifest-metrics-configs/cluster-role.yaml
-  - manifest-metrics-configs/service-account.yaml
-  - manifest-alerting/AlertManagerConfigmap.yaml
-  - manifest-alerting/Deployment.yaml
-  - manifest-alerting/Service.yaml
-  - manifest-alerting/AlertTemplateConfigMap.yaml
+  - manifest-metricss/cluster-role-binding.yaml
+  - manifest-metricss/deployment.yaml
+  - manifest-metricss/service.yaml
+  - manifest-metricss/cluster-role.yaml
+  - manifest-metricss/service-account.yaml
+  - manifest-alerts/AlertManagerConfigmap.yaml
+  - manifest-alerts/Deployment.yaml
+  - manifest-alerts/Service.yaml
+  - manifest-alerts/AlertTemplateConfigMap.yaml
   - logging/es-dep.yaml
   - logging/es-dep.yaml
   - logging/es-pv.yaml

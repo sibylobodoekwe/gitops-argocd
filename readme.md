@@ -30,7 +30,7 @@ microservice-sockshop/
 │   └── prodcert.yaml
 ├── gcp-terraform
 ├── images/
-├── manifest-alerting/
+├── manifest-alerts/
 │   ├── AlertManagerConfigmap.yaml
 │   ├── AlertTemplateConfigMap.yaml
 │   ├── Deployment.yaml
