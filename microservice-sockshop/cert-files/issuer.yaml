@@ -32,7 +32,7 @@ spec:
     solvers:
     - selector:
         dnsZones:
-          - microservice.ssibdev.com.ng
+          - microservice.http://ssibdev.com.ng
       dns01:
         route53:
           region: us-central1

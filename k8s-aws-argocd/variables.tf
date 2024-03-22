@@ -5,6 +5,6 @@ variable "region" {
 }
 
 variable "domain_name" {
-  default     = "ssibdev.com.ng"
+  default     = "http://ssibdev.com.ng"
   description = "Domain name"
 }

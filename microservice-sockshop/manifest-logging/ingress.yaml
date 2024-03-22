@@ -12,10 +12,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - microservice.ssibdev.com.ng
+    - microservice.http://ssibdev.com.ng
     secretName: acme-crt-prod
   rules:
-  - host: microservice.ssibdev.com.ng
+  - host: microservice.http://ssibdev.com.ng
     http:
       paths:
       - path: /

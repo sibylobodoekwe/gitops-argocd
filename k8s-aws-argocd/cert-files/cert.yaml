@@ -5,7 +5,7 @@ metadata:
 spec:
   secretName: acme-crt
   dnsNames:
-  - microservice.ssibdev.com.ng
+  - microservice.http://ssibdev.com.ng
   issuerRef:
     name: letsencrypt-staging
     # We can reference ClusterIssuers by changing the kind here.
@@ -24,13 +24,13 @@ spec:
     name: letsencrypt-stag
     kind: ClusterIssuer
   dnsNames:
-    - microservice.ssibdev.com.ng
+    - microservice.http://ssibdev.com.ng
   acme:
     config:
       - dns01:
           provider: route53
         domains:
-          - microservice.ssibdev.com.ng
+          - microservice.http://ssibdev.com.ng
 
 
 apiVersion: cert-manager.io/v1
@@ -40,7 +40,7 @@ metadata:
 spec:
   secretName: acme-crt-secret
   dnsNames:
-  - microservice.ssibdev.com.ng
+  - microservice.http://ssibdev.com.ng
   issuerRef:
     name: letsencrypt-staging
     # We can reference ClusterIssuers by changing the kind here.

@@ -5,7 +5,7 @@ metadata:
 spec:
   secretName: acme-crt
   dnsNames:
-  - microservice.ssibdev.com.ng
+  - microservice.http://ssibdev.com.ng
   issuerRef:
     name: letsencrypt-staging
     kind: ClusterIssuer
@@ -23,13 +23,13 @@ spec:
     name: letsencrypt-staging
     kind: ClusterIssuer
   dnsNames:
-    - microservice.ssibdev.com.ng
+    - microservice.http://ssibdev.com.ng
   acme:
     config:
       - dns01:
           provider: google-cloud-dns
         domains:
-          - microservice.ssibdev.com.ng
+          - microservice.http://ssibdev.com.ng
 
 ---
 apiVersion: cert-manager.io/v1
@@ -39,7 +39,7 @@ metadata:
 spec:
   secretName: acme-crt-secret
   dnsNames:
-  - microservice.ssibdev.com.ng
+  - microservice.http://ssibdev.com.ng
   issuerRef:
     name: letsencrypt-staging
     kind: ClusterIssuer

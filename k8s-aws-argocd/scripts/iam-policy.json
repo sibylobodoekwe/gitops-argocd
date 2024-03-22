@@ -3,9 +3,9 @@
       {
         "role": "roles/resourcemanager.organizationAdmin",
         "members": [
-          "user:service@ssibdev.com.ng",
+          "user:service@http://ssibdev.com.ng",
           "group:admins@example.com",
-          "ssibdev.com.ng",
+          "http://ssibdev.com.ng",
           "137024560456-compute@developer.gserviceaccount.com"
         ]
       },
