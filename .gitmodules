@@ -7,6 +7,3 @@
 [submodule "gcp-k8s-gitlab"]
 	path = gcp-k8s-gitlab
 	url = https://github.com/sibylobodoekwe/kubernetes-iaac-microservice
-[submodule "app-microservice-sock-shop"]
-	path = app-microservice-sock-shop
-	url = https://github.com/sibylobodoekwe/kubernetes-iaac-microservice
