@@ -16,7 +16,7 @@ Create a service account and download its JSON key. This service account will be
 
 
 directory for my sockshop setup 
-
+```
 microservice-sockshop/
 ├── argocd/
 │   ├── app.yaml
@@ -79,46 +79,98 @@ microservice-sockshop/
 │   │           └── ...
 │   └── guide.md
 ├── kustomization.yaml
-├── readme.md
+├── readme.md 
+```
 
 
-- Configure Terraform
+
+
+
+
+
+
+
+
+
+```mermaid
+flowchart TB
+    A[User]
+    B[Kubernetes]
+    C[ArgoCD]
+    D[Prometheus]
+    E[Grafana]
+    F[Ingress Controller]
+    G[Sock-Shop Manifests]
+    H[Sock-Shop Deployment using Docker]
+    I[GKE] 
+
+    A -->|Access| F
+    A -->|Monitor| D
+    F -->|Routing| G
+    C -->|Deploy| G
+    G -->|Deploy| H
+    H -->|Deploy| B
+    B -->|Deploy| I
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+to begin start by building the infra with terraform 
+
+create or configure terraform
 git clone https://github.com/sibylobodoekwe/kubernetes-iaac-microservice
 cd microservice-sockshop
 
 
-Create a terraform folder or use my terraform files in gcp-terraform folder, provide the required variables:
+create a terraform folder or use my terraform files in gcp-terraform folder, provide the required variables:
 
-'project_id = "your_project_id"
+
+`project_id = "your_project_id"
 region     = "your_region"
-'
+`
 
 Initialize Terraform and download the required plugins.
 
-'terraform init'
+`terraform init`
 
 
 - Create GKE Clusters
 
 Apply the Terraform configuration to create the GKE cluster.
 
-'terraform apply --auto-approve'
+`terraform apply --auto-approve`
 
 Review the changes and confirm by typing yes when prompted.
 
 you'd get a similar output 
 
-`
+
+```
 ## Outputs
 
-- **Kubernetes Cluster Host:** `34.132.198.125`
-- **Kubernetes Cluster Name:** `microservice-417615-gke`
-- **Project ID:** `microservice-417615`
-- **Region:** `us-central1`
-- **Zone:** `us-central1-c`
+   **Kubernetes Cluster Host:** `34.132.198.125`
+   **Kubernetes Cluster Name:** `microservice-417615-gke`
+   **Project ID:** `microservice-417615`
+    **Region:** `us-central1`
+   **Zone:** `us-central1-c`
+```
 
 
-`
 # setting up prometheus
 first connect to the kubernetes gke cluster
 
